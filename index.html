@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KODAK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-family: 'Noto Sans', sans-serif;
+        }
+        .nav1{
+            height: 60px;
+            width: 80%;
+            background-color: #FDBA2D;
+            float: left;
+        }
+        .nav1 .logo img{
+			height: 50px;
+            vertical-align: middle;
+		}
+        .nav1 .logo{
+			float: left;
+			margin-left: 24px;
+            line-height: 60px;
+        }
+        .nav1 .logo2{
+            float: left;
+            font-size: 36px;
+            line-height: 60px;
+            text-decoration: none;
+            color: #000000;
+            font-weight: 700;
+        }
+        .nav1-2{
+            height: 60px;
+            width: 20%;
+            background-color: #212121;
+            float: left;
+        }
+        .clearfix{
+            clear: both;
+        }
+        .icon{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon a{
+            padding: 0 24px;
+        }
+        .nav2{
+            height: 60px;
+            width: 100%;
+            background-color: #212121;
+        }
+        .menu{
+            float: left;
+            list-style: none;
+        }
+        .menu li{
+            float: left;
+        }
+        .menu li a{
+            text-decoration: none;
+            color: #FFFFFF;
+            font-size: 16px;
+            line-height: 60px;
+            padding: 0 24px;
+            display: block;
+        }
+        .menu .currentpage{
+            color: #000000;
+            background-color: #FDBA2D;
+            font-weight: 700;
+        }
+        .menu li a:hover{
+            color: #000000;
+            background-color: #FDBA2D;
+            font-weight: 700;
+        }
+        .hero{
+            height: 450px;
+            width: 100%;
+            text-align: center;
+            background-image: url(https://i.postimg.cc/prr79HWt/Kodak-office-banner.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+        .hero-text{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .hero-text h2{
+            color: #FFFFFF;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        .hero-text p{
+            color: #FFFFFF;
+            font-size: 16px;
+            line-height: 30px;
+        }
+        .helper{
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+		}
+        .box{
+            margin-top: 100px;
+            margin-bottom: 76px;
+        }
+        .intro-box{
+            height: 456px;
+            width: 1062px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 24px;
+            border: 1px solid #9e9e9e;
+            border-radius: 10px;
+        }
+        .photoprinter{
+            height: 400px;
+            width: 400px;
+            background-image:url(https://i.postimg.cc/R0D51MNy/image.jpg);
+            background-size: cover;
+            background-position: center center;
+            border-radius: 10px;
+            float: left;
+            margin-left: 40px;
+            margin-top: 28px;
+            margin-right: 54px;
+        }
+        .apparel{
+            height: 400px;
+            width: 400px;
+            background-image:url(https://i.postimg.cc/mrtSZ3NH/jjh.jpg);
+            background-size: cover;
+            background-position: center center;
+            border-radius: 10px;
+            float: left;
+            margin-left: 40px;
+            margin-top: 28px;
+            margin-right: 54px;
+        }
+        .intro-box .button{
+            display: inline-block;
+            position: relative;
+            top: 72px;
+            left: 72px;
+            background-color: #212121;
+            color: #FDBA2D;
+            width: 131px;
+            height: 34px;
+            text-align: center;
+            line-height: 34px;
+            border-radius: 17px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .intro-box .button:hover{
+            background-color: #FFFFFF;
+            color: #E92F06;
+        }
+        .intro-text{
+            float: left;
+        }
+        .intro-text h3{
+            font-size: 28px;
+            font-weight: 700;
+            margin-top: 72px;
+            margin-bottom: 96px;
+        }
+        .intro-text h4{
+            font-size: 20px;
+            font-weight: 700;
+            color: #E92F06;
+            margin-bottom: 12px;
+        }
+        .intro-text p{
+            font-size: 16px;
+            margin-bottom: 28px;
+            color: #212121;
+        }
+        .intro-box .product{
+            width: 525px;
+            margin-bottom: 32px;
+            text-align: center;
+            float: left;
+            font-size: 14px;
+        }
+        .intro-box .product1{
+            width: 159px;
+			height: 138px;
+			float: left;
+        }
+        .intro-box .product2{
+            width: 159px;
+			height: 138px;
+			float: left;
+            margin: 0 24px;
+        }
+        .intro-box .product3{
+            width: 159px;
+			height: 138px;
+			float: left;
+        }
+        .intro-box .item{
+            border-radius: 5px;
+        }
+        .intro-box .item img{
+            border-radius: 5px;
+        }
+        .intro{
+            text-align: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .intro h3{
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 32px;
+            color: #E92F06;
+        }
+        .intro p{
+            line-height: 30px;
+            font-size: 16px;
+            width: 1062px;
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+            color: #424242;
+        }
+        .product a:hover{
+            opacity: 50%;
+        }
+        .service{
+            width: 100%;
+            height: 450px;
+            background-color: #FDBA2D;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+        .service h3{
+            text-align: center;
+            color: #212121;
+            font-size: 24px;
+            font-weight: 700;
+            padding-top: 48px;
+            padding-bottom: 16px;
+        }
+        .service .line{
+            border-bottom: 3px solid #E92F06;
+            width: 90px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 32px;
+        }
+        .service .img{
+            width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .img1{
+            width:405px;
+            height:275px;
+            background-image:url(https://i.postimg.cc/63H8tdbp/PROSPER-6000-roll-500x313.jpg);
+            background-size: cover;
+            background-position: center center;
+            float: left;
+        }
+        .text1{
+            background-color:rgba(0,0,0,0.6);
+            height:100%;
+            color: #FFFFFF;
+            text-align:center;
+            opacity:0;
+            transition: opacity .3s;
+        }
+        .img1:hover .text1{
+            opacity:1;
+        }
+        .service h4{
+            font-size: 24px;
+            font-weight: 700;
+            padding-top: 48px;
+            padding-bottom: 24px;
+        }
+        .service p{
+            font-size: 14px;
+            margin: 24px 0;
+        }
+        .service .img3 .text3 p{
+            margin: 16px 0;
+        }
+        .img2{
+            width:405px;
+            height:275px;
+            background-image:url(https://i.postimg.cc/KYGcj1Mk/Sonora-plates-500x313.jpg);
+            background-size: cover;
+            background-position: center center;
+            float: left;
+            margin: 0 32px;
+        }
+        .text2{
+            background-color:rgba(0,0,0,0.6);
+            height:100%;
+            color: #FFFFFF;
+            text-align:center;
+            opacity:0;
+            transition: opacity .3s;
+        }
+        .img2:hover .text2{
+            opacity:1;
+        }
+        .img3{
+            width:405px;
+            height:275px;
+            background-image:url(https://i.postimg.cc/kXYvfSn9/kodak-film-can-500x313.jpg);
+            background-size: cover;
+            background-position: center center;
+            float: left;
+        }
+        .text3{
+            background-color:rgba(0,0,0,0.6);
+            height:100%;
+            color: #FFFFFF;
+            text-align:center;
+            opacity:0;
+            transition: opacity .3s;
+        }
+        .img3:hover .text3 {
+            opacity:1;
+        }
+        .retro h3{
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .retro p{
+            font-size: 16px;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 48px;
+        }
+        .retro .Red{
+            font-weight: 700;
+            font-size: 18px;
+            color: #E92F06;
+        }
+        .history{
+            width: 1062px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 120px;
+        }
+        .history .div1{
+            width: 531px;
+			height: 265.5px;
+			float: right;
+			background-color: #424242;
+            text-align: center;
+        }
+        .history .div1 p{
+            color: #FFFFFF;
+            font-size: 16px;
+            line-height: 30px;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .history .Bold{
+            font-weight: 700;
+            font-size: 18px;
+        }
+        .history .Red{
+            font-weight: 700;
+            font-size: 18px;
+            color: #E92F06;
+        }
+        .history .div2{
+            width: 265.5px;
+			height: 265.5px;
+			float: right;
+			background-image: url(https://i.postimg.cc/KYH2tCf9/Kakao-Talk-20220607-091456822-01.jpg);	
+            background-position: center center;
+            background-size: cover;
+        }
+        .history .div3{
+            width: 265.5px;
+			height: 265.5px;
+			float: right;
+			background-color: #FDBA2D;	
+            text-align: center;
+            padding-top: 72px;
+        }
+        .history .div3 img{
+            margin-top: 16px;
+        }
+        .history .div4{
+            width: 531px;
+			height: 531px;
+			float: right;
+            background-image: url(https://i.postimg.cc/ZR4rFDqd/Kakao-Talk-20220607-091456822-02.jpg);	
+            background-position: center center;
+            background-size: cover;	
+        }
+        .history .div5{
+            width: 531px;
+			height: 265.5px;
+			float: right;
+            background-image: url(https://i.postimg.cc/6pHJNFk9/Kakao-Talk-20220607-091456822-03.jpg);	
+            background-position: center center;
+            background-size: cover;
+        }
+        .history .div6{
+            width: 531px;
+			height: 265.5px;
+			float: right;
+			background-color: #424242;		
+            text-align: center;
+        }
+        .history .div6 p{
+            color: #FFFFFF;
+            font-size: 16px;
+            line-height: 30px;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .history .div7{
+            width: 796.5px;
+			height: 265.5px;
+			float: right;
+            background-image: url(https://i.postimg.cc/vm9zvVLp/Kakao-Talk-20220607-091456822.jpg);	
+            background-position: center center;
+            background-size: cover;	
+        }
+        .history .div8{
+            width: 265.5px;
+			height: 265.5px;
+			float: right;
+            background-image: url(https://i.postimg.cc/qMRx5Yxc/73898-66317-718.jpg);	
+            background-position: center center;
+            background-size: cover;		
+        }
+        .footer{
+            width: 100%;
+            height: 240px;
+            background-color: #212121;
+            text-align: center;
+            padding-top: 24px;
+        }
+        .footer a{
+            text-decoration: none;
+            color: #eeeeee;
+            font-size: 14px;
+        }
+        .footer img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            margin-bottom: 16px;
+        }
+        .footer p{
+            color: #BDBDBD;
+            font-size: 14px;
+        }
+        .footer a:not(:last-child)::after{
+            content: ' ㅣ';
+        }
+        @media(max-width:1024px){
+            .hero{
+                padding: 0 24px;
+            }
+            .hero-text h2{
+                font-size: 28px;
+            }
+            .hero-text p{
+                font-size: 14px;
+            }
+            .icon a{
+                padding: 0 12px;
+            }
+            .intro-box{
+                height: 365px;
+                width: 850px;
+            }
+            .photoprinter{
+                height: 320px;
+                width: 320px;
+                margin-left: 24px;
+                margin-top: 22px;
+                margin-right: 24px;
+            }
+            .apparel{
+                height: 320px;
+                width: 320px;
+                margin-left: 24px;
+                margin-top: 22px;
+                margin-right: 24px;
+            }
+            .intro-box .button{
+                display: inline-block;
+                position: relative;
+                top: 40px;
+                left: 56px;
+                width: 104px;
+                height: 28px;
+                line-height: 28px;
+                border-radius: 14px;
+                font-size: 14px;
+            }
+            .intro-text{
+                float: left;
+            }
+            .intro-text h3{
+                font-size: 22px;
+                margin-top: 40px;
+                margin-bottom: 80px;
+            }
+            .intro-text h4{
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+            .intro-text p{
+                font-size: 14px;
+                margin-bottom: 24px;
+            }
+            .intro-box .product{
+                width: 450px;
+                margin-bottom: 24px;
+                font-size: 13px;
+            }
+            .intro-box .product1 img{
+                width: 120px;
+            }
+            .intro-box .product2 img{
+                width: 130px;
+            }
+            .intro-box .product3 img{
+                width: 130px;
+            }
+            .intro-box .product1{
+                width: 130px;
+            }
+            .intro-box .product2{
+                width: 130px;
+                margin: 0 20px;
+            }
+            .intro-box .product3{
+                width: 130px;
+            }
+            .intro p{
+                width: 850px;
+                font-size: 15px;
+            }
+            .service{
+                height: 360px;
+            }
+            .service p{
+                display: none;
+            }
+            .service h4{
+                padding-top: 0px;
+                padding-bottom: 0px;
+                line-height: 182px;
+            }
+            .service .img{
+                width: 860px;
+            }
+            .img1{
+                width:268px;
+                height:182px;
+            }
+            .img2{
+                width:268px;
+                height:182px;
+                margin: 0 24px;
+            }
+            .img3{
+                width:268px;
+                height:182px;
+            }
+            .history{
+                width: 852px;
+            }
+            .history .div1{
+                width: 426px;
+                height: 213px;
+            }
+            .history .div1 p{
+                font-size: 14px;
+            }
+            .history .Bold{
+                font-size: 16px;
+            }
+            .history .Red{
+                font-size: 16px;
+            }
+            .history .div2{
+                width: 213px;
+                height: 213px;
+            }
+            .history .div3{
+                width: 213px;
+                height: 213px;
+                padding-top: 44px;
+            }
+            .history .div3 img{
+                margin-top: 8px;
+            }
+            .history .div4{
+                width: 426px;
+                height: 426px;
+            }
+            .history .div5{
+                width: 426px;
+                height: 213px;
+            }
+            .history .div6{
+                width: 426px;
+                height: 213px;
+            }
+            .history .div6 p{
+                font-size: 14px;
+            }
+            .history .div7{
+                width: 639px;
+                height: 213px;
+            }
+            .history .div8{
+                width: 213px;
+                height: 213px;	
+            }
+        }
+        @media(max-width:600px){
+            .nav2{
+                display: none;
+            }
+            .icon a{
+                padding: 0 12px;
+            }
+            .hero{
+                padding: 0 24px;
+            }
+            .hero-text h2{
+                font-size: 24px;
+                margin-bottom: 24px;
+            }
+            .hero-text p{
+                font-size: 12px;
+                line-height: 30px;
+            }
+            .intro{
+                padding: 0 24px;
+            }
+            .box .product{
+                display: none;
+            }
+            .intro-box{
+                height: 520px;
+                width: 455px;
+                margin-bottom: 24px;
+                text-align: center;
+                position: relative;
+            }
+            .photoprinter{
+                float: none;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .apparel{
+                float: none;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .intro-box .button{
+                position: absolute;
+                top: 465px;
+                bottom: 0px;
+                left: 175px;
+                text-align: center;
+            }
+            .intro-text{
+                float: none;
+            }
+            .intro-text h3{
+                margin-top: 8px;
+                margin-bottom: 12px;
+            }
+            .intro-text h4{
+                margin-bottom: 4px;
+            }
+            .intro-text p{
+                margin-bottom: 24px;
+            }
+            .intro{
+                text-align: center;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .intro h3{
+                font-size: 28px;
+                font-weight: 700;
+                margin-bottom: 32px;
+            }
+            .intro p{
+                line-height: 30px;
+                font-size: 16px;
+                width: 455px;
+            }
+            .service{
+                height: 720px;
+                text-align: center;
+            }
+            .service .img{
+                width: 268px;
+                height: 180px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .service p{
+                display: none;
+            }
+            .service h4{
+                padding-top: 0px;
+                padding-bottom: 0px;
+                line-height: 180px;
+            }
+            .img1{
+                width:268px;
+                height:182px;
+            }
+            .img2{
+                width:268px;
+                height:182px;
+                margin: 8px 0;
+            }
+            .img3{
+                width:268px;
+                height:182px;
+            }
+            .history{
+                width: 426px;
+            }
+            .history .div4{
+                display: none;
+            }
+            .history .div7{
+                display: none;
+            }
+            .history .div8{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="nav1">
+            <a href="#" class="logo"><img src="https://i.postimg.cc/63wVpDwm/2.jpg" alt="logo"></a>
+            <a href="#" class="logo2">KODAK</a>
+        </div>
+        <div class="nav1-2">
+            <div class="helper"></div><div class="icon">
+                <a href="#"><img src="https://i.postimg.cc/3JPpdp8D/dsf.png" alt="search"></a>
+                <a href="#"><img src="https://i.postimg.cc/3JD05RXr/image.png" alt="menu"></a>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="nav2">
+            <ul class="menu">
+                <li><a class="currentpage" href="#">회사소개</a></li>
+                <li><a href="#">뉴스 및 미디어</a></li>
+                <li><a href="#">지속가능성</a></li>
+                <li><a href="#">비즈니스</a></li>
+            </ul>
+        </div>
+        <div class="hero">
+            <div class="helper"></div><div class="hero-text">
+                <h2>“You press the button-we do the rest”</h2>
+                <p>코닥이라는 이름은 이미징 혁신을 제공하는 오랜 전통으로 전 세계적으로 인정받고 있습니다. 
+                    <br>코닥은 이제 이미징에 중점을 둔 기술 회사로 새로운 장을 만들어가고 있습니다.</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="intro-box">
+                <div class="photoprinter"></div>
+                <a href="sub1.html" class="button">구매하기</a>
+                <div class="intro-text">
+                    <h3>KODAK PHOTOPRINTER</h3>
+                    <h4>영원한 기억, 코닥</h4>
+                    <p>사랑하는 사람에게  영원한 기억을 선물하세요</p>
+                </div>
+                <div class="product">
+                    <div class="product1 item">
+                        <a href="#"><img src="https://i.postimg.cc/wBCJ2XXD/1.jpg" alt="스퀘어필름" width="159px"></a>
+                        <p>스퀘어필름</p>
+                    </div>
+                    <div class="product2 item">
+                        <a href="#"><img src="https://i.postimg.cc/5yn6hLC7/2.jpg" alt="악세서리세트" width="159px"></a>
+                        <p>악세서리세트</p>
+                    </div>
+                    <div class="product3 item">
+                        <a href="#"><img src="https://i.postimg.cc/vBvBnf3Y/he.jpg" alt="포토프린터" width="159px"></a>
+                        <p>포토프린터</p>
+                    </div>
+                </div>
+            </div>
+            <div class="intro-box">
+                <div class="apparel"></div>
+                <a href="#" class="button">구매하기</a>
+                <div class="intro-text">
+                    <h3>KODAK APPAREL</h3>
+                    <h4>프리미엄 라이프스타일 웨어</h4>
+                    <p>코닥만의 컬러로 채운 썸머 트래블 보러 가기</p>
+                </div>
+                <div class="product">
+                    <div class="product1 item">
+                        <a href="#"><img src="https://i.postimg.cc/2yzbyrRK/df.jpg" alt="신상품" width="159px"></a>
+                        <p>신상품</p>
+                    </div>
+                    <div class="product2 item">
+                        <a href="#"><img src="https://i.postimg.cc/JhL1MKWT/saf.jpg" alt="메일러1940" width="159px"></a>
+                        <p>메일러1940</p>
+                    </div>
+                    <div class="product3 item">
+                        <a href="#"><img src="https://i.postimg.cc/bN5rcQJM/gwevd.jpg" alt="썸머슈즈" width="159px"></a>
+                        <p>썸머슈즈</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="intro">
+            <h3>코닥 소개</h3>
+            <p>
+                코닥은 인쇄 및 첨단 소재/화학 제품에 중점을 둔 글로벌 기술 회사입니다.
+                당사는 주로 상업 인쇄, 포장, 출판, 제조, 엔터테인먼트 분야의 고객에게 업계 최고의 하드웨어, 소프트웨어, 소모품, 서비스를 제공합니다.
+                코닥은 지속 가능한 솔루션을 개발하는 데 있어 환경적 책임감과 지속적 리더십에 최선을 다합니다.
+                우수한 제품, 빠른 지원, 세계적 수준의 R&D로 구성된 광범위한 포트폴리오를 갖춘
+                코닥 솔루션은 수익성 향상 및 성장 촉진을 원하는 고객에게 있어 현명한 투자입니다.
+            </p>
+        </div>
+        <div class="service">
+            <h3>Our Services</h3>
+            <div class="line"></div>
+            <div class="img">
+                <div class="img1">
+                    <div class="text1">
+                        <h4>디지털 인쇄</h4>
+                        <p>-코닥 PROSPER 프레스 및 구성 요소와 차세대<br> ULTRASTREAM 
+                            잉크젯 기술을 비롯한 연속 잉크젯 왼쇄 솔루션</p>
+                        <p>-코닥 잉크 및 코팅</p>
+                    </div>
+                </div>
+                <div class="img2">
+                    <div class="text2">
+                        <h4>일반 인쇄</h4>
+                        <p>-SONORA 무현상 판재를 비롯한 오프셋 판제</p>
+                        <p>-CTP(Computer-to-plate) 이미징 장치</p>
+                    </div>
+                </div>
+                <div class="img3">
+                    <div class="text3">
+                        <h4>첨단 소재 및 화학</h4>
+                        <p>-영화, 소비자용, 전문가용, 산업용을 비롯한 필름</p>
+                        <p>-첨단 소재</p>
+                        <p>-기능성 인쇄 솔루션</p>
+                        <p>-합성 화학 물질</p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="retro">
+            <h3>ABOUT KODAK RETRO</h3>
+            <p><span class="Red">EASTMAN KODAK</span><br>19세기 부터 시작된 현대식 필름의 역사</p>
+        </div>
+        <div class="history">
+                <div class="div1">
+                    <div class="helper"></div><p>
+                        <span class="Bold">코닥 <span class="Red">4PASS</span> 필름 인화 기술</span><br>
+                        1882년, 조지 이스트만이 현대식 필름의 초기 형태를 만들어내고<br>
+                        세계 최초의 감광필름을 만들어 양산화에 성공함으로써<br>
+                        코닥의 역사가 시작되었습니다.
+                    </p>
+                </div>
+                <div class="div2"></div>
+                <div class="div3">
+                    <h4><span class="Bold">KODAK</span><br><span class="Red">RETRO STORY</span></h4>
+                    <img src="https://i.postimg.cc/MHDvpMpg/image.jpg" alt="logo" width="92px">
+                </div>
+                <div class="div4"></div>
+                <div class="div5"></div>
+                <div class="div6">
+                    <div class="helper"></div><p>
+                        코닥 4PASS 필름은 140여 년의 시간을 거치며 <br>
+                        코닥 기술이 모두 집약된 필름입니다.<br>
+                        가장 코닥 다운 방식으로 계승된 4PASS 필름으로 <br>
+                        모든 순간을 레트로한 감성으로 인화해보세요<br>
+                    </p>
+                </div>
+                <div class="div7"></div>
+                <div class="div8"></div>
+                <div class="clearfix"></div>
+        </div>
+        <div class="footer">
+                <div class="a">
+                    <a href="#">회사정보</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                </div>
+                <img src="https://i.postimg.cc/MHDvpMpg/image.jpg" alt="logo" width="39px">
+                <p>Copyright © 2022 Eastman Kodak Company. All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
